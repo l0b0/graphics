@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  width="100px"
+  height="100px"
+  viewBox="0 0 864 864"
+  id="cern-logo"
+  xml:lang="en"
+  >
+  <desc>CERN logo</desc>
+  <g id="main-layer">
+    <clipPath id="limit-to-viewport">
+      <!-- Used to avoid any contents in the white frame or outside the viewport -->
+      <rect id="clip-viewport" x="0px" y="0px" width="864px" height="864px"/>
+    </clipPath>
+    <clipPath id="limit-to-inner-square">
+      <!-- Used to avoid any contents in the white frame or outside the viewport -->
+      <rect id="clip-inner-square" x="45px" y="45px" width="767px" height="767px"/>
+    </clipPath>
+    <rect id="inner-square" x="45px" y="45px" width="767px" height="767px" fill="#003152" stroke="none"/>
+    <g id="psb-layer">
+      <circle id="psb-ring" cx="461px" cy="453px" r="258px" fill="none" stroke="white" stroke-width="30px"/>
+      <ellipse id="psb-ring-c-background" cx="104px" cy="375px" rx="309.6px" ry="73.71px" fill="#003152" stroke="none" clip-path="url(#limit-to-inner-square)"/>
+      <line id="psb-ejection-line" x1="461px" y1="195px" x2="153px" y2="195px" stroke="white" stroke-width="30px" transform="rotate(100.2 461 453)"/>
+    </g>
+    <g id="sps-layer">
+      <circle id="sps-ring" cx="354px" cy="375px" r="250px" fill="none" stroke="white" stroke-width="42px"/>
+      <circle id="sps-ring-inner-shadow" cx="354px" cy="375px" r="224px" fill="none" stroke="#003152" stroke-width="10px"/>
+      <circle id="sps-ring-outer-shadow" cx="354px" cy="375px" r="276px" fill="none" stroke="#003152" stroke-width="10px"/>
+      <line id="sps-na-line" x1="354px" y1="125px" x2="864px" y2="125px" stroke="white" stroke-width="42px" clip-path="url(#limit-to-viewport)"/>
+      <g id="sps-wa-line-layer" transform="rotate(133.7 354 375)">
+        <line id="sps-wa-line" x1="354px" y1="125px" x2="864px" y2="125px" stroke="white" stroke-width="42px" clip-path="url(#limit-to-viewport)"/>
+        <line id="sps-wa-line-outer-shadow" x1="354px" y1="99px" x2="664px" y2="99px" stroke="#003152" stroke-width="10px"/>
+        <line id="sps-wa-line-inner-shadow" x1="554px" y1="151px" x2="664px" y2="151px" stroke="#003152" stroke-width="10px"/>
+      </g>
+      <g id="sps-cngs-line-layer" transform="rotate(78.5 354 375)">
+        <line id="sps-cngs-line" x1="354px" y1="125px" x2="858px" y2="125px" stroke="white" stroke-width="42px" clip-path="url(#limit-to-viewport)"/>
+        <line id="sps-cngs-line-outer-shadow" x1="354px" y1="99px" x2="824px" y2="99px" stroke="#003152" stroke-width="10px"/>
+        <line id="sps-cngs-line-inner-shadow" x1="554px" y1="151px" x2="824px" y2="151px" stroke="#003152" stroke-width="10px"/>
+      </g>
+      <line id="sps-tt10-line" x1="354px" y1="125px" x2="124px" y2="125px" stroke="white" stroke-width="42px" transform="rotate(-104 354 375)"/>
+    </g>
+    <g id="text-layer">
+      <text x="120px" y="423px" font-family="Verdana" font-size="94pt" fill="white" text-anchor="start" transform="scale(1.2 1)">C</text>
+      <text x="204px" y="423px" font-family="Verdana" font-size="94pt" fill="white" text-anchor="start" transform="scale(1.2 1)">E</text>
+      <text x="280px" y="423px" font-family="Verdana" font-size="94pt" fill="white" text-anchor="start" transform="scale(1.2 1)">R</text>
+      <text x="363px" y="423px" font-family="Verdana" font-size="94pt" fill="white" text-anchor="start" transform="scale(1.2 1)">N</text>
+    </g>
+      <rect id="outer-border" x="12.5px" y="12.5px" width="832px" height="832px" fill="none" stroke="#003152" stroke-width="39px"/>
+  </g>
+</svg>
