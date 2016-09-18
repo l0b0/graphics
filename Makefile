@@ -1,5 +1,4 @@
 OPENSCAD = /usr/bin/openscad
-OPENSCAD_OPTIONS = --projection=ortho --camera=0,0,0.5,90,0,0,3
 
 chisel_files = $(wildcard chisel/*_example.scad)
 chisel_pngs = $(chisel_files:.scad=.png)
@@ -8,8 +7,6 @@ chisel_outputs = $(chisel_pngs) $(chisel_stls)
 
 build_files = $(chisel_outputs)
 
-openscad_build_command = $(OPENSCAD) $(OPENSCAD_OPTIONS) -o $@ $<
-
 .PHONY: all
 all: build
 
@@ -17,9 +14,12 @@ all: build
 build: $(build_files)
 
 %.png: %.scad
-	$(openscad_build_command)
+	 $(OPENSCAD) --projection=ortho --camera=0,0,0.5,0,0,90,3 -o $(basename $@)_top$(suffix $@) $<
+	 $(OPENSCAD) --projection=ortho --camera=0,0,0.5,90,0,0,3 -o $(basename $@)_front$(suffix $@) $<
+	 $(OPENSCAD) --projection=ortho --camera=0,0,0.5,90,0,90,3 -o $(basename $@)_right$(suffix $@) $<
+
 %.stl: %.scad
-	$(openscad_build_command)
+	$(OPENSCAD) -o $@ $<
 
 .PHONY: clean
 clean:
