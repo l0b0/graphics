@@ -1,3 +1,4 @@
+CONVERT = /usr/bin/convert
 OPENSCAD = /usr/bin/openscad
 
 chisel_files = $(wildcard chisel/*_example.scad)
@@ -17,6 +18,7 @@ build: $(build_files)
 	 $(OPENSCAD) --projection=ortho --camera=0,0,0.5,0,0,90,3 -o $(basename $@)_top$(suffix $@) $<
 	 $(OPENSCAD) --projection=ortho --camera=0,0,0.5,90,0,0,3 -o $(basename $@)_front$(suffix $@) $<
 	 $(OPENSCAD) --projection=ortho --camera=0,0,0.5,90,0,90,3 -o $(basename $@)_right$(suffix $@) $<
+	 $(CONVERT) $(basename $@)_top$(suffix $@) $(basename $@)_front$(suffix $@) $(basename $@)_right$(suffix $@) +append $(basename $@)$(suffix $@)
 
 %.stl: %.scad
 	$(OPENSCAD) -o $@ $<
