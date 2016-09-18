@@ -4,4 +4,3 @@ module isosceles_triangle() {
 		paths = [[0, 1, 2]]
 	);
 }
-
