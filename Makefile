@@ -16,19 +16,9 @@ all: build
 .PHONY: build
 build: $(build_files)
 
-%.amf: %.scad
-	$(openscad_build_command)
-%.dxf: %.scad
-	$(openscad_build_command)
-%.dxf: %.scad
-	$(openscad_build_command)
-%.off: %.scad
-	$(openscad_build_command)
 %.png: %.scad
 	$(openscad_build_command)
 %.stl: %.scad
-	$(openscad_build_command)
-%.svg: %.scad
 	$(openscad_build_command)
 
 .PHONY: clean
