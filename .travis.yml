@@ -1,5 +1,6 @@
 language: shell
 before_install:
+  - sudo add-apt-repository ppa:openscad/releases
   - sudo apt-get -qq update
   - sudo apt-get install -y openscad
 script: make
